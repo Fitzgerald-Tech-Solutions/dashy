@@ -4,7 +4,7 @@ name: Yarn Lock Changes
 on: [pull_request]
 jobs:
   check:
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted]
     steps:
       - name: Checkout
         uses: actions/checkout@v2
