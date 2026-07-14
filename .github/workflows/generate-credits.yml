@@ -8,7 +8,7 @@ on:
 jobs:
   # Job #1 - Update the Credits page
   insert-credits:
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted]
     name: Inserts contributors into credits.md
     steps:
     - name: Contribute List
@@ -24,7 +24,7 @@ jobs:
         committer_email: liss-bot@d0h.co
   # Job #2 - Generate an embedded SVG asset, showing all contributors
   generate-contributors:
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted]
     steps:
       - uses: bubkoo/contributors-list@v1
         with:

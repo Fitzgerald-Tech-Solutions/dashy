@@ -5,7 +5,7 @@ on:
     - cron: '0 1 * * 0' # At 01:00 on Sunday.
 jobs:
   update-wiki:
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted]
     steps:
     - uses: actions/checkout@master
     - name: Sync Wiki
