@@ -4,6 +4,8 @@ on: push
 jobs:
   build:
     runs-on: [self-hosted]
+    container:
+      image: ubuntu:24.04
     steps:
     - uses: actions/cache@v2
       with:

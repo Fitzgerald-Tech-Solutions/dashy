@@ -9,6 +9,8 @@ jobs:
   # Job #1 - Update the Credits page
   insert-credits:
     runs-on: [self-hosted]
+    container:
+      image: ubuntu:24.04
     name: Inserts contributors into credits.md
     steps:
     - name: Contribute List
@@ -25,6 +27,8 @@ jobs:
   # Job #2 - Generate an embedded SVG asset, showing all contributors
   generate-contributors:
     runs-on: [self-hosted]
+    container:
+      image: ubuntu:24.04
     steps:
       - uses: bubkoo/contributors-list@v1
         with:

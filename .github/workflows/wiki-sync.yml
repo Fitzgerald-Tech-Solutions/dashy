@@ -6,6 +6,8 @@ on:
 jobs:
   update-wiki:
     runs-on: [self-hosted]
+    container:
+      image: ubuntu:24.04
     steps:
     - uses: actions/checkout@master
     - name: Sync Wiki

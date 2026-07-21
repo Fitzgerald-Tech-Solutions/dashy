@@ -10,6 +10,8 @@ jobs:
   build:
     name: is-sponsor-label
     runs-on: [self-hosted]
+    container:
+      image: ubuntu:24.04
     steps:
       - uses: JasonEtco/is-sponsor-label-action@v1
         with:
